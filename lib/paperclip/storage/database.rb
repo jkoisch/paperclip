@@ -23,6 +23,7 @@ module Paperclip
       end
 
       def instance_read_file(style)
+        puts "STYLE #########: " + style.to_s
         column = column_for_style(style)
         responds = instance.respond_to?(column)
         cached = self.instance_variable_get("@_#{column}")
